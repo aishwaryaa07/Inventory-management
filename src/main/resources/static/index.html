@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Manager</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-icon">&#128230;</span>
+        <span class="brand-name">Inventory</span>
+      </div>
+      <nav class="nav">
+        <a href="#/dashboard" class="nav-link" data-route="dashboard">
+          <span class="nav-icon" data-icon="dashboard"></span> Dashboard
+        </a>
+        <a href="#/products" class="nav-link" data-route="products">
+          <span class="nav-icon" data-icon="products"></span> Products
+        </a>
+        <a href="#/add-product" class="nav-link" data-route="add-product">
+          <span class="nav-icon" data-icon="add"></span> Add Product
+        </a>
+        <a href="#/update-stock" class="nav-link" data-route="update-stock">
+          <span class="nav-icon" data-icon="update"></span> Update Stock
+        </a>
+        <a href="#/transactions" class="nav-link" data-route="transactions">
+          <span class="nav-icon" data-icon="transactions"></span> Transactions
+        </a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="topbar-spacer"></div>
+        <div class="admin-badge">
+          <span class="avatar">A</span>
+          <span class="admin-name">Admin</span>
+        </div>
+      </header>
+
+      <main class="content" id="app">
+        <div class="loading">Loading&hellip;</div>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

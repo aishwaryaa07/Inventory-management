@@ -62,6 +62,12 @@ The app starts on **http://localhost:9091** (configurable via `server.port`). Op
 ./mvnw test
 ```
 
+Unit tests (service layer, Mockito) and controller tests (`@WebMvcTest`/MockMvc) run with no extra setup. There's also a full-stack integration test (`ProductApiIntegrationTest`) that boots the real app against a real, disposable MySQL instance via [Testcontainers](https://testcontainers.com/) — it requires Docker to be installed and running locally. Run just that one with:
+
+```bash
+./mvnw test -Dtest=ProductApiIntegrationTest
+```
+
 ## API Reference
 
 Base path: `/api`. All request/response bodies are JSON.
